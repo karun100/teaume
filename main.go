@@ -44,7 +44,7 @@ func main() {
 
 	// Define the /signup route using Gin
 	router.POST("/signup", controllers.SignupHandler)
-	router.GET("/login", controllers.LoginHandler)
+	router.POST("/login", controllers.LoginHandler)
 
 	// Protected Routes (Require JWT Middleware)
 	protected := router.Group("/")
